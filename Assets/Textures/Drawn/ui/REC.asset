@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -1566551335, guid: ab85ac808950aa04ea8320fc273cd8c0, type: 3}
-  m_Name: Animation_2018-5-5_14-30-6
+  m_Name: REC
   m_EditorClassIdentifier: 
   frames:
   - _texture: {fileID: 28451156296188304}
@@ -121,7 +121,7 @@ Sprite:
   m_AtlasName: 
   m_PackingTag: 
   m_RenderDataKey:
-    00000000000000000000000000000000: 0
+    0c24df8f70ba0c74783168e530ecaf84: 213166845979412716
   m_AtlasTags: []
   m_SpriteAtlas: {fileID: 0}
   m_RD:
@@ -326,7 +326,7 @@ Sprite:
   m_AtlasName: 
   m_PackingTag: 
   m_RenderDataKey:
-    00000000000000000000000000000000: 0
+    0c24df8f70ba0c74783168e530ecaf84: 213910333947771812
   m_AtlasTags: []
   m_SpriteAtlas: {fileID: 0}
   m_RD:

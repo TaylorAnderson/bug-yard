@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -1566551335, guid: ab85ac808950aa04ea8320fc273cd8c0, type: 3}
-  m_Name: Animation_2018-5-4_18-51-28
+  m_Name: bad-tree
   m_EditorClassIdentifier: 
   frames:
   - _texture: {fileID: 28469545022454208}
@@ -121,7 +121,7 @@ Sprite:
   m_AtlasName: 
   m_PackingTag: 
   m_RenderDataKey:
-    00000000000000000000000000000000: 0
+    d5215e003a22e4b408cea46ad5accfd6: 213569964454279168
   m_AtlasTags: []
   m_SpriteAtlas: {fileID: 0}
   m_RD:
@@ -595,7 +595,7 @@ Sprite:
   m_AtlasName: 
   m_PackingTag: 
   m_RenderDataKey:
-    00000000000000000000000000000000: 0
+    d5215e003a22e4b408cea46ad5accfd6: 213957126599569338
   m_AtlasTags: []
   m_SpriteAtlas: {fileID: 0}
   m_RD:

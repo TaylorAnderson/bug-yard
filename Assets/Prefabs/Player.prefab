@@ -58,10 +58,10 @@ GameObject:
   - component: {fileID: 4061553946116096}
   - component: {fileID: 33136763699143362}
   - component: {fileID: 136508184753699772}
-  - component: {fileID: 23605480740882492}
   - component: {fileID: 143183233680788508}
   - component: {fileID: 114430616880711336}
   - component: {fileID: 114785397701481066}
+  - component: {fileID: 114272721093304558}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -104,7 +104,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1593315648844396}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.78, z: -8.48}
+  m_LocalPosition: {x: 0, y: 3, z: -9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4061553946116096}
@@ -146,40 +146,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!23 &23605480740882492
-MeshRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1747937688620366}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 2100000, guid: a31a0cf8f90424518bf5722eee9e9e22, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
 --- !u!33 &33136763699143362
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -214,6 +180,19 @@ MonoBehaviour:
   minimumY: -85
   maximumY: 85
   framesOfSmoothing: 5
+--- !u!114 &114272721093304558
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1747937688620366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7beb1f3a014c43eaa45ef0876f364ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  positionWander: {x: 0, y: 3, z: -9}
+  positionCamera: {x: 0, y: 0, z: 0}
 --- !u!114 &114430616880711336
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -365,7 +344,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 213141808259902204, guid: 93e4b5a803809446eadc02a1f9d484b5, type: 2}
+  m_Sprite: {fileID: 213508170771532978, guid: 93e4b5a803809446eadc02a1f9d484b5, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

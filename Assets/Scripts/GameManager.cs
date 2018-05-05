@@ -11,15 +11,18 @@ public enum ViewMode {
 
 public class GameManager : MonoBehaviour {
 
-	public static GameManager gameManager;
+	public static GameManager instance;
 
 	public GameObject player;
-	private ViewMode _viewMode = ViewMode.WANDER;
+	public ViewMode _viewMode = ViewMode.WANDER;
 
 	// Use this for initialization
 	void Start () {
 		//do crimes here
-		GameManager.gameManager = this;
+		GameManager.instance = this;
+
+		UIManager.instance.HideCameraOverlay();
+		
 	}
 
 	// Update is called once per frame
@@ -31,11 +34,13 @@ public class GameManager : MonoBehaviour {
 
 			if (_viewMode == ViewMode.WANDER) {
 				_viewMode = ViewMode.CAMERA;
-				script.GoToWanderingView();
+				script.GoToCameraView();
+				UIManager.instance.showCameraOverlay();
 			}
 			else if (_viewMode == ViewMode.CAMERA) {
 				_viewMode = ViewMode.WANDER;
-				script.GoToCameraView();
+				script.GoToWanderingView();
+				UIManager.instance.HideCameraOverlay();
 			}
 
 			

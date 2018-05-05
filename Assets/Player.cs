@@ -21,28 +21,33 @@ public class Player : MonoBehaviour {
 
 	public void GoToCameraView()
 	{
-		StartCoroutine( Transition(positionCamera) );
-		// TweenCameraTo1stPerson();
+		StartCoroutine( LerpToPosition(.3f, positionCamera) );
 	}
 
 	public void GoToWanderingView()
 	{
-		print("jkdhskfj");
-		StartCoroutine( Transition(positionWander) );
-		// TweenCameraTo3rdPerson();
+		StartCoroutine( LerpToPosition(.3f, positionWander) );
 	}
-
-	IEnumerator Transition(Vector3 target)
-	{
-		float t = 0.0f;
-		print(t);
-		Vector3 startingPos = _camera.transform.localPosition;
-		while (t < 1.0f) {
-			t += Time.deltaTime * (Time.timeScale/.003f);
-		}
-		_camera.transform.localPosition = Vector3.Lerp(startingPos, target, t);
-		yield return 0;
-	}
+	 IEnumerator LerpToPosition(float lerpSpeed, Vector3 newPosition, bool useRelativeSpeed = false)
+     {    
+        //  if (useRelativeSpeed)
+        //  {
+        //      float totalDistance = farRight.position.x - farLeft.position.x;
+        //      float diff = transform.position.x - farLeft.position.x;
+        //      float multiplier = diff / totalDistance;
+        //      lerpSpeed *= multiplier;
+        //  }
+ 
+         float t = 0.0f;
+         Vector3 startingPos = _camera.transform.localPosition;
+         while (t < 1.0f)
+         {
+             t += Time.deltaTime * (Time.timeScale / lerpSpeed);
+ 
+             _camera.transform.localPosition = Vector3.Lerp(startingPos, newPosition, t);
+             yield return 0;
+         }    
+     }
 
 	IEnumerator TweenCameraTo3rdPerson() {
 		_camera.transform.localPosition = Vector3.MoveTowards(_camera.transform.localPosition, positionWander, .2f * Time.deltaTime);

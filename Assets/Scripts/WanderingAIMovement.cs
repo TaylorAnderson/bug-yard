@@ -6,11 +6,10 @@ public class WanderingAIMovement : MonoBehaviour
 {
 
     public bool isMoving = false;
-    Wander2 wander;
-    SteeringBasics steering;
-    NearSensor nearSensor;
-    CollisionAvoidance collision;
-    Rigidbody rigidBody;
+    Wander2 wander; //Picks where to go
+    SteeringBasics steering;    //Drives it around
+    NearSensor nearSensor;  //Collision sensor
+    CollisionAvoidance collision;   //Collosion reaction bot
 
     float walkSpeed = 2.5f;
 
@@ -20,14 +19,13 @@ public class WanderingAIMovement : MonoBehaviour
         steering = GetComponent<SteeringBasics>();
         nearSensor = GetComponentInChildren<NearSensor>();
         collision = GetComponent<CollisionAvoidance>();
-        rigidBody = GetComponent<Rigidbody>();
 
         initSpeedValues();
     }
 
     void initSpeedValues()
     {
-        steering.maxVelocity = walkSpeed;
+        steering.maxVelocity = walkSpeed;   //Give it speeeeed
     }
 
     private void Update()
@@ -36,20 +34,21 @@ public class WanderingAIMovement : MonoBehaviour
         {
             Vector3 accel = Vector3.zero;
 
-            if (nearSensor.targets.Count > 0)
+            if (nearSensor.targets.Count > 0)   //If collision
             {
-                accel = collision.getSteering(nearSensor.targets);
+                accel = collision.getSteering(nearSensor.targets);  //Steer away
             }
 
-            if (accel.magnitude < 0.005f)
+            if (accel.magnitude < 0.005f)   //If not moving fast enough, pick somewhere
             {
                 accel = wander.getSteering();
             }
-            steering.steer(accel);
+            steering.steer(accel);  //move
             steering.lookWhereYoureGoing();
         }
     }
 
+    //Doesn't work half the time
     protected void stayStanding()
     {
         //Collisions end up tipping it over

@@ -4,126 +4,219 @@ using UnityEngine;
 
 public class CameraManager : MonoBehaviour {
 
-	public enum RotationAxes { MouseX = 1, MouseY = 2 }
-	public RotationAxes axes = RotationAxes.MouseX;
-	public bool invertY = false;
-	
-	public float sensitivityX = 10F;
-	public float sensitivityY = 9F;
- 
-	public float minimumX = -360F;
-	public float maximumX = 360F;
- 
-	public float minimumY = -85F;
-	public float maximumY = 85F;
- 
-	float rotationX = 0F;
-	float rotationY = 0F;
- 
-	private List<float> rotArrayX = new List<float>();
-	float rotAverageX = 0F;	
- 
-	private List<float> rotArrayY = new List<float>();
-	float rotAverageY = 0F;
- 
-	public float framesOfSmoothing = 5;
- 
-	Quaternion originalRotation;
+	/* State */
+	Dictionary<ViewMode, ICameraState> m_states = new Dictionary<ViewMode, ICameraState>();
+	ICameraState m_current_state;
 
+	/* Camera Movement */
+
+	Camera cam;
+	public bool isControlable;
+    private Vector3 screenPoint;
+    private Vector3 offset;
+    public Transform target;
+    public float distance = 5.0f;
+    public float xSpeed = 50.0f;
+    public float ySpeed = 50.0f;
+
+    public float yMinLimit = -80f;
+    public float yMaxLimit = 80f;
+
+    public float distanceMin = .5f;
+    public float distanceMax = 15f;
+
+    public float smoothTime = 2f;
+
+    public float rotationYAxis = 0.0f;
+    float rotationXAxis = 0.0f;
+
+    float velocityX = 0.0f;
+    float velocityY = 0.0f;
+    float moveDirection = -1;
+	
 	void Start ()
 	{			
-		if (GetComponent<Rigidbody>())
-		{
-			GetComponent<Rigidbody>().freezeRotation = true;
-		}
-		
-		originalRotation = transform.localRotation;
+		cam = GetComponent<Camera>();
+
+		Vector3 angles = transform.eulerAngles;
+        rotationYAxis = (rotationYAxis == 0) ? angles.y : rotationYAxis;
+        rotationXAxis = angles.x;
+
+        Rigidbody rigidbody = GetComponent<Rigidbody>();
+
+        // Make the rigid body not change rotation
+        if (rigidbody)
+        {
+            rigidbody.freezeRotation = true;
+        }
+
+		m_states[ViewMode.WANDER] = new WanderCamera();
+		m_states[ViewMode.CAMERA] = new SnapshotCamera();
+
+		m_current_state = m_states[ViewMode.WANDER];
 	}
+
+	void Update()
+	{
+
+		if (m_current_state != null)
+			m_current_state.StateUpdate(this);
+
+	}
+
+	void LateUpdate()
+    {
+        if (target)
+        {
+            // if (Input.GetMouseButton(1) && isControlable)
+            // {
+                velocityX += xSpeed * Input.GetAxis("Mouse X") * 0.02f;
+                velocityY += ySpeed * Input.GetAxis("Mouse Y") * 0.02f;
+            // }
+
+
+            if (Input.GetMouseButton(2) && isControlable)
+            {
+                Vector3 curScreenPoint = new Vector3(moveDirection*Input.mousePosition.x, moveDirection*Input.mousePosition.y, screenPoint.z);
+
+                Vector3 curPosition = cam.ScreenToWorldPoint(curScreenPoint) + offset;
+                target.transform.position = curPosition;
+            }
+
+            // if (Input.GetKeyDown(KeyCode.R) && isControlable)
+            // {
+            //     target.transform.position = Vector3.zero;
+            // }
+
+            // if (Input.GetKeyDown(KeyCode.T) && isControlable)
+            // {
+            //     moveDirection *= -1;
+            // }
+
+            if (isControlable)
+            {
+                distance -= Input.GetAxis("Mouse ScrollWheel");
+
+                if (distance > distanceMax)
+                {
+                    distance = distanceMax;
+                }
+                else if (distance < distanceMin)
+                {
+                    distance = distanceMin;
+                }
+            }
+
+            rotationYAxis += velocityX;
+            rotationXAxis -= velocityY;
+
+            rotationXAxis = ClampAngle(rotationXAxis, yMinLimit, yMaxLimit);
+
+            Quaternion fromRotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, 0);
+            Quaternion toRotation = Quaternion.Euler(rotationXAxis, rotationYAxis, 0);
+            Quaternion rotation = toRotation;
+
+            Vector3 negDistance = new Vector3(0.0f, 0.0f, -distance);
+            Vector3 position = rotation * negDistance + target.position;
+
+            transform.rotation = rotation;
+			// target.rotation = Quaternion.AngleAxis(transform.rotation.y, Vector3.up);
+			target.rotation = Quaternion.Euler(target.rotation.eulerAngles.z, rotation.eulerAngles.y, target.rotation.eulerAngles.z);
+            transform.position = position;
+
+            velocityX = Mathf.Lerp(velocityX, 0, Time.deltaTime * smoothTime);
+            velocityY = Mathf.Lerp(velocityY, 0, Time.deltaTime * smoothTime);
+
+            screenPoint = cam.WorldToScreenPoint(target.transform.position);
+            offset = target.transform.position - cam.ScreenToWorldPoint(new Vector3(moveDirection*Input.mousePosition.x, moveDirection*Input.mousePosition.y, screenPoint.z));
+        }
+
+    }
+
+    public static float ClampAngle(float angle, float min, float max)
+    {
+        if (angle < -360F)
+            angle += 360F;
+        if (angle > 360F)
+            angle -= 360F;
+        return Mathf.Clamp(angle, min, max);
+    }
+
+	public void SetState(ViewMode new_state)
+    {
+
+		if(m_current_state != null)
+        	m_current_state.StateExit(this);
+		
+        m_current_state = m_states[new_state];
+        m_current_state.StateEnter(this);
+
+    }
 
 	public void MouseCameraX() {
 
-		rotAverageX = 0f;
+		// rotAverageX = 0f;
  
-		rotationX += Input.GetAxis("Mouse X") * sensitivityX * Time.timeScale;
+		// rotationX += Input.GetAxis("Mouse X") * sensitivityX * Time.timeScale;
 
-		rotArrayX.Add(rotationX);
+		// rotArrayX.Add(rotationX);
 
-		if (rotArrayX.Count >= framesOfSmoothing)
-		{
-			rotArrayX.RemoveAt(0);
-		}
-		for(int i = 0; i < rotArrayX.Count; i++)
-		{
-			rotAverageX += rotArrayX[i];
-		}
-		rotAverageX /= rotArrayX.Count;
-		rotAverageX = ClampAngle(rotAverageX, minimumX, maximumX);
+		// if (rotArrayX.Count >= framesOfSmoothing)
+		// {
+		// 	rotArrayX.RemoveAt(0);
+		// }
+		// for(int i = 0; i < rotArrayX.Count; i++)
+		// {
+		// 	rotAverageX += rotArrayX[i];
+		// }
+		// rotAverageX /= rotArrayX.Count;
+		// rotAverageX = ClampAngle(rotAverageX, minimumX, maximumX);
 
-		Quaternion xQuaternion = Quaternion.AngleAxis (rotAverageX, Vector3.up);
-		transform.localRotation = originalRotation * xQuaternion;		
+		// Quaternion xQuaternion = Quaternion.AngleAxis (rotAverageX, Vector3.up);
+		// target.Rotate(Vector3.up * Input.GetAxis("Mouse X") * 18f * Time.timeScale);		
 
 	}
 
 	public void FirstPersonMouseCameraY() {
 
-		rotAverageY = 0f;
+		// rotAverageY = 0f;
  
-		float invertFlag = 1f;
-		if( invertY )
-		{
-			invertFlag = -1f;
-		}
-		rotationY += Input.GetAxis("Mouse Y") * sensitivityY * invertFlag * Time.timeScale;
+		// float invertFlag = 1f;
+		// if( invertY )
+		// {
+		// 	invertFlag = -1f;
+		// }
+		// rotationY += Input.GetAxis("Mouse Y") * sensitivityY * invertFlag * Time.timeScale;
 		
-		rotationY = Mathf.Clamp(rotationY, minimumY, maximumY);
+		// rotationY = Mathf.Clamp(rotationY, minimumY, maximumY);
 
-		rotArrayY.Add(rotationY);
+		// rotArrayY.Add(rotationY);
 
-		if (rotArrayY.Count >= framesOfSmoothing)
-		{
-			rotArrayY.RemoveAt(0);
-		}
-		for(int j = 0; j < rotArrayY.Count; j++)
-		{
-			rotAverageY += rotArrayY[j];
-		}
-		rotAverageY /= rotArrayY.Count;
+		// if (rotArrayY.Count >= framesOfSmoothing)
+		// {
+		// 	rotArrayY.RemoveAt(0);
+		// }
+		// for(int j = 0; j < rotArrayY.Count; j++)
+		// {
+		// 	rotAverageY += rotArrayY[j];
+		// }
+		// rotAverageY /= rotArrayY.Count;
 
-		Quaternion yQuaternion = Quaternion.AngleAxis (rotAverageY, Vector3.left);
-		// yQuaternion = originalRotation * yQuaternion;
-		transform.RotateAround(Vector3.zero, Vector3.left, Input.GetAxis("Mouse Y") * sensitivityY * Time.timeScale );
+		// Quaternion yQuaternion = Quaternion.AngleAxis (rotAverageY, Vector3.left);
+		// yQuaternion =  originalRotation * yQuaternion;
+		// playerPosition.Rotate(yQuaternion.eulerAngles);
 
 	}
- 
-	void Update ()
-	{
-		if (axes == RotationAxes.MouseX)
-		{	
-				
-		}
-		else
-		{			
-			
-		}
-	}
-	
-	public void SetSensitivity(float s)
-	{
-		sensitivityX = s;
-		sensitivityY = s;
-	}
- 
-	public static float ClampAngle (float angle, float min, float max)
-	{
-		angle = angle % 360;
-		if ((angle >= -360F) && (angle <= 360F)) {
-			if (angle < -360F) {
-				angle += 360F;
-			}
-			if (angle > 360F) {
-				angle -= 360F;
-			}			
-		}
-		return Mathf.Clamp (angle, min, max);
+
+	public void ThirdPersonMouseCameraY() {
+
+		// float velocityY += ySpeed * Input.GetAxis("Mouse Y") * 0.02f;
+		// transform.RotateAround(
+		// 	playerPosition.position,
+		// 	transform.TransformDirection(Vector3.left),
+		// 	-rotY
+		// );
+
+
 	}
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-enum ViewMode {
+public enum ViewMode {
 
 	WANDER,
 	CAMERA
@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour {
 		//do crimes here
 		GameManager.gameManager = this;
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		

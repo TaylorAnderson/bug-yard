@@ -237,6 +237,7 @@ GameObject:
   - component: {fileID: 159487948}
   - component: {fileID: 159487947}
   - component: {fileID: 159487946}
+  - component: {fileID: 159487949}
   m_Layer: 0
   m_Name: grass (5)
   m_TagString: Untagged
@@ -329,7 +330,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 213735284629985176, guid: 6c82545ec637415449e0e0de5d6f9953, type: 2}
+  m_Sprite: {fileID: 213647323541910634, guid: 6c82545ec637415449e0e0de5d6f9953, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -339,6 +340,17 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &159487949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 159487944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bdd1f25ae3514268b4dc0e57a59eaed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &180033242
 Prefab:
   m_ObjectHideFlags: 0
@@ -397,6 +409,7 @@ GameObject:
   - component: {fileID: 191013164}
   - component: {fileID: 191013163}
   - component: {fileID: 191013162}
+  - component: {fileID: 191013165}
   m_Layer: 0
   m_Name: grass (4)
   m_TagString: Untagged
@@ -499,6 +512,17 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &191013165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 191013160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bdd1f25ae3514268b4dc0e57a59eaed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &259264332
 GameObject:
   m_ObjectHideFlags: 0
@@ -612,6 +636,85 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1001 &447970160
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 788640848}
+    m_Modifications:
+    - target: {fileID: 4418895623326200, guid: 86074a63c0ec01e41b676c4751869249, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 254.50853
+      objectReference: {fileID: 0}
+    - target: {fileID: 4418895623326200, guid: 86074a63c0ec01e41b676c4751869249, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 4418895623326200, guid: 86074a63c0ec01e41b676c4751869249, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 251.93484
+      objectReference: {fileID: 0}
+    - target: {fileID: 4418895623326200, guid: 86074a63c0ec01e41b676c4751869249, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4418895623326200, guid: 86074a63c0ec01e41b676c4751869249, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0.36905217
+      objectReference: {fileID: 0}
+    - target: {fileID: 4418895623326200, guid: 86074a63c0ec01e41b676c4751869249, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4418895623326200, guid: 86074a63c0ec01e41b676c4751869249, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: -0.9294087
+      objectReference: {fileID: 0}
+    - target: {fileID: 4418895623326200, guid: 86074a63c0ec01e41b676c4751869249, type: 2}
+      propertyPath: m_RootOrder
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 212990345790292314, guid: 86074a63c0ec01e41b676c4751869249,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 213099029855819468, guid: f1f74d88f039a4c49b0f8575849dc9f4,
+        type: 2}
+    - target: {fileID: 212990345790292314, guid: 86074a63c0ec01e41b676c4751869249,
+        type: 2}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4418895623326200, guid: 86074a63c0ec01e41b676c4751869249, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4418895623326200, guid: 86074a63c0ec01e41b676c4751869249, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114977113656444654, guid: 86074a63c0ec01e41b676c4751869249,
+        type: 2}
+      propertyPath: m_File
+      value: 
+      objectReference: {fileID: 11400000, guid: f1f74d88f039a4c49b0f8575849dc9f4,
+        type: 2}
+    - target: {fileID: 4333573572649152, guid: 86074a63c0ec01e41b676c4751869249, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4333573572649152, guid: 86074a63c0ec01e41b676c4751869249, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4333573572649152, guid: 86074a63c0ec01e41b676c4751869249, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 86074a63c0ec01e41b676c4751869249, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &497042653
 GameObject:
   m_ObjectHideFlags: 0
@@ -694,6 +797,7 @@ GameObject:
   - component: {fileID: 637573468}
   - component: {fileID: 637573467}
   - component: {fileID: 637573466}
+  - component: {fileID: 637573470}
   m_Layer: 0
   m_Name: tree (2)
   m_TagString: Untagged
@@ -713,7 +817,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   castShadows: 1
-  receiveShadows: 1
+  receiveShadows: 0
 --- !u!114 &637573467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -747,7 +851,7 @@ SpriteRenderer:
   m_GameObject: {fileID: 637573465}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -796,6 +900,17 @@ Transform:
   m_Father: {fileID: 788640848}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &637573470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 637573465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bdd1f25ae3514268b4dc0e57a59eaed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &643871058
 GameObject:
   m_ObjectHideFlags: 0
@@ -807,6 +922,7 @@ GameObject:
   - component: {fileID: 643871062}
   - component: {fileID: 643871061}
   - component: {fileID: 643871060}
+  - component: {fileID: 643871063}
   m_Layer: 0
   m_Name: grass (7)
   m_TagString: Untagged
@@ -909,6 +1025,17 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &643871063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 643871058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bdd1f25ae3514268b4dc0e57a59eaed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &659360165
 GameObject:
   m_ObjectHideFlags: 0
@@ -974,105 +1101,6 @@ Transform:
   m_Father: {fileID: 1857185972}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -1.64, z: 0}
---- !u!1 &674602647
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 674602650}
-  - component: {fileID: 674602649}
-  - component: {fileID: 674602648}
-  m_Layer: 0
-  m_Name: bug
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &674602648
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 674602647}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 492295970, guid: ab85ac808950aa04ea8320fc273cd8c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_States: []
-  m_File: {fileID: 11400000, guid: f1f74d88f039a4c49b0f8575849dc9f4, type: 2}
-  speed: 1
-  m_Settings:
-    randomizeOnStart: 1
-    playOnStart: 1
-    overrideFileSettings: 0
-    customPlaybackMode: 1
-    customFramesPerSecond: 8
-    customBorder: {x: 0, y: 0, z: 0, w: 0}
-    customPixelsPerUnit: 100
-    customFilterMode: 2
-    wrapMode: 1
-    startFrame: 0
---- !u!212 &674602649
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 674602647}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 2100000, guid: 144b996f77c05d14a8083981015716b7, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 213400755929011608, guid: f1f74d88f039a4c49b0f8575849dc9f4, type: 2}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
---- !u!4 &674602650
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 674602647}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 253.38, y: 0.12, z: 245.4}
-  m_LocalScale: {x: 0.1, y: 0.10000006, z: 0.10000006}
-  m_Children: []
-  m_Father: {fileID: 788640848}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &682326839
 GameObject:
   m_ObjectHideFlags: 0
@@ -1084,6 +1112,7 @@ GameObject:
   - component: {fileID: 682326843}
   - component: {fileID: 682326842}
   - component: {fileID: 682326841}
+  - component: {fileID: 682326844}
   m_Layer: 0
   m_Name: grass (3)
   m_TagString: Untagged
@@ -1186,6 +1215,17 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &682326844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 682326839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bdd1f25ae3514268b4dc0e57a59eaed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &693462662
 GameObject:
   m_ObjectHideFlags: 0
@@ -1197,6 +1237,7 @@ GameObject:
   - component: {fileID: 693462666}
   - component: {fileID: 693462665}
   - component: {fileID: 693462664}
+  - component: {fileID: 693462667}
   m_Layer: 0
   m_Name: grass (8)
   m_TagString: Untagged
@@ -1299,6 +1340,17 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &693462667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 693462662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bdd1f25ae3514268b4dc0e57a59eaed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &788640847
 GameObject:
   m_ObjectHideFlags: 0
@@ -1324,8 +1376,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1326731394}
   - {fileID: 961447684}
-  - {fileID: 674602650}
   - {fileID: 1145985630}
   - {fileID: 497042654}
   - {fileID: 158706421}
@@ -1349,8 +1401,9 @@ Transform:
   - {fileID: 693462663}
   - {fileID: 1006290049}
   - {fileID: 1865786545}
+  - {fileID: 1246807417}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &961447680
 GameObject:
@@ -1463,7 +1516,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 788640848}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1006290048
 GameObject:
@@ -1476,6 +1529,7 @@ GameObject:
   - component: {fileID: 1006290052}
   - component: {fileID: 1006290051}
   - component: {fileID: 1006290050}
+  - component: {fileID: 1006290053}
   m_Layer: 0
   m_Name: grass (9)
   m_TagString: Untagged
@@ -1578,6 +1632,17 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &1006290053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1006290048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bdd1f25ae3514268b4dc0e57a59eaed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1084698763
 GameObject:
   m_ObjectHideFlags: 0
@@ -1590,8 +1655,9 @@ GameObject:
   - component: {fileID: 1084698767}
   - component: {fileID: 1084698766}
   - component: {fileID: 1084698765}
+  - component: {fileID: 1084698768}
   m_Layer: 0
-  m_Name: Animation_2018-5-4_18-54-59 Sprite
+  m_Name: Doodle-Girl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1605,11 +1671,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1084698763}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.86, z: 0}
+  m_LocalPosition: {x: 0, y: 0.86000013, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1326731394}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1084698765
 MonoBehaviour:
@@ -1696,6 +1762,17 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &1084698768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1084698763}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bdd1f25ae3514268b4dc0e57a59eaed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1135536008
 GameObject:
   m_ObjectHideFlags: 0
@@ -1707,6 +1784,7 @@ GameObject:
   - component: {fileID: 1135536012}
   - component: {fileID: 1135536011}
   - component: {fileID: 1135536010}
+  - component: {fileID: 1135536013}
   m_Layer: 0
   m_Name: grass
   m_TagString: Untagged
@@ -1809,6 +1887,17 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &1135536013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1135536008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bdd1f25ae3514268b4dc0e57a59eaed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1145985629
 GameObject:
   m_ObjectHideFlags: 0
@@ -2035,6 +2124,11 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!4 &1246807417 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4418895623326200, guid: 86074a63c0ec01e41b676c4751869249,
+    type: 2}
+  m_PrefabInternal: {fileID: 447970160}
 --- !u!1 &1326731389
 GameObject:
   m_ObjectHideFlags: 0
@@ -2048,8 +2142,8 @@ GameObject:
   - component: {fileID: 1326731392}
   - component: {fileID: 1326731397}
   - component: {fileID: 1326731395}
-  - component: {fileID: 1326731396}
   - component: {fileID: 1326731391}
+  - component: {fileID: 1326731390}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2057,6 +2151,26 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1326731390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1326731389}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cd97f032c69e48f4a551aec475d5e88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  axes: 1
+  invertY: 0
+  sensitivityX: 10
+  sensitivityY: 9
+  minimumX: -360
+  maximumX: 360
+  minimumY: -85
+  maximumY: 85
+  framesOfSmoothing: 5
 --- !u!114 &1326731391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2100,13 +2214,14 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1326731389}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 250, y: 1, z: 250}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1523655478}
   - {fileID: 1084698764}
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_Father: {fileID: 788640848}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1326731395
 MonoBehaviour:
@@ -2131,27 +2246,6 @@ MonoBehaviour:
   airControl: 1
   antiBumpFactor: 0.75
   antiBunnyHopFactor: 1
---- !u!114 &1326731396
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114785397701481066, guid: 3ba8baa31218e429891d97b2171e084f,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1326731389}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cd97f032c69e48f4a551aec475d5e88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  axes: 1
-  invertY: 0
-  sensitivityX: 10
-  sensitivityY: 9
-  minimumX: -360
-  maximumX: 360
-  minimumY: -85
-  maximumY: 85
-  framesOfSmoothing: 5
 --- !u!143 &1326731397
 CharacterController:
   m_ObjectHideFlags: 0
@@ -2181,6 +2275,7 @@ GameObject:
   - component: {fileID: 1479637844}
   - component: {fileID: 1479637843}
   - component: {fileID: 1479637842}
+  - component: {fileID: 1479637846}
   m_Layer: 0
   m_Name: tree (3)
   m_TagString: Untagged
@@ -2200,7 +2295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   castShadows: 1
-  receiveShadows: 1
+  receiveShadows: 0
 --- !u!114 &1479637843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2234,7 +2329,7 @@ SpriteRenderer:
   m_GameObject: {fileID: 1479637841}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -2283,6 +2378,17 @@ Transform:
   m_Father: {fileID: 788640848}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1479637846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1479637841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bdd1f25ae3514268b4dc0e57a59eaed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1482786297
 GameObject:
   m_ObjectHideFlags: 0
@@ -2294,6 +2400,7 @@ GameObject:
   - component: {fileID: 1482786301}
   - component: {fileID: 1482786300}
   - component: {fileID: 1482786299}
+  - component: {fileID: 1482786302}
   m_Layer: 0
   m_Name: grass (2)
   m_TagString: Untagged
@@ -2396,6 +2503,17 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &1482786302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1482786297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bdd1f25ae3514268b4dc0e57a59eaed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1523655474
 GameObject:
   m_ObjectHideFlags: 0
@@ -2408,7 +2526,6 @@ GameObject:
   - component: {fileID: 1523655477}
   - component: {fileID: 1523655476}
   - component: {fileID: 1523655475}
-  - component: {fileID: 1523655479}
   - component: {fileID: 1523655480}
   m_Layer: 0
   m_Name: MAIN_CAMERA
@@ -2478,33 +2595,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1523655474}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 250, y: 4, z: 241}
+  m_LocalPosition: {x: 0, y: 3, z: -9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_Father: {fileID: 1326731394}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1523655479
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114108832917500070, guid: 3ba8baa31218e429891d97b2171e084f,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1523655474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cd97f032c69e48f4a551aec475d5e88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  axes: 2
-  invertY: 0
-  sensitivityX: 10
-  sensitivityY: 9
-  minimumX: -360
-  maximumX: 360
-  minimumY: -85
-  maximumY: 85
-  framesOfSmoothing: 5
 --- !u!114 &1523655480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2516,6 +2612,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a12c81ab837514879a47574d53aaf772, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isControlable: 1
+  target: {fileID: 1326731394}
+  distance: 9
+  xSpeed: 30
+  ySpeed: 25
+  yMinLimit: 5
+  yMaxLimit: 60
+  distanceMin: 0.5
+  distanceMax: 15
+  smoothTime: 2
+  rotationYAxis: 0
 --- !u!1 &1566271210
 GameObject:
   m_ObjectHideFlags: 0
@@ -2527,6 +2634,7 @@ GameObject:
   - component: {fileID: 1566271214}
   - component: {fileID: 1566271213}
   - component: {fileID: 1566271212}
+  - component: {fileID: 1566271215}
   m_Layer: 0
   m_Name: grass (1)
   m_TagString: Untagged
@@ -2629,6 +2737,17 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &1566271215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1566271210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bdd1f25ae3514268b4dc0e57a59eaed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1621181898
 GameObject:
   m_ObjectHideFlags: 0
@@ -2640,6 +2759,7 @@ GameObject:
   - component: {fileID: 1621181901}
   - component: {fileID: 1621181900}
   - component: {fileID: 1621181899}
+  - component: {fileID: 1621181903}
   m_Layer: 0
   m_Name: tree (4)
   m_TagString: Untagged
@@ -2659,7 +2779,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   castShadows: 1
-  receiveShadows: 1
+  receiveShadows: 0
 --- !u!114 &1621181900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2693,7 +2813,7 @@ SpriteRenderer:
   m_GameObject: {fileID: 1621181898}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -2742,6 +2862,17 @@ Transform:
   m_Father: {fileID: 788640848}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1621181903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1621181898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bdd1f25ae3514268b4dc0e57a59eaed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1652935946
 GameObject:
   m_ObjectHideFlags: 0
@@ -2866,6 +2997,7 @@ GameObject:
   - component: {fileID: 1681031438}
   - component: {fileID: 1681031437}
   - component: {fileID: 1681031436}
+  - component: {fileID: 1681031439}
   m_Layer: 0
   m_Name: grass (6)
   m_TagString: Untagged
@@ -2968,6 +3100,17 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &1681031439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1681031434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bdd1f25ae3514268b4dc0e57a59eaed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1786157195
 GameObject:
   m_ObjectHideFlags: 0
@@ -3108,7 +3251,7 @@ Transform:
   m_Children:
   - {fileID: 659360167}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1865786544
 GameObject:
@@ -3121,6 +3264,7 @@ GameObject:
   - component: {fileID: 1865786548}
   - component: {fileID: 1865786547}
   - component: {fileID: 1865786546}
+  - component: {fileID: 1865786549}
   m_Layer: 0
   m_Name: grass (10)
   m_TagString: Untagged
@@ -3223,6 +3367,17 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &1865786549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1865786544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bdd1f25ae3514268b4dc0e57a59eaed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2128084909
 GameObject:
   m_ObjectHideFlags: 0
@@ -3234,6 +3389,7 @@ GameObject:
   - component: {fileID: 2128084912}
   - component: {fileID: 2128084911}
   - component: {fileID: 2128084910}
+  - component: {fileID: 2128084914}
   m_Layer: 0
   m_Name: tree (1)
   m_TagString: Untagged
@@ -3253,7 +3409,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   castShadows: 1
-  receiveShadows: 1
+  receiveShadows: 0
 --- !u!114 &2128084911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3287,7 +3443,7 @@ SpriteRenderer:
   m_GameObject: {fileID: 2128084909}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -3336,6 +3492,17 @@ Transform:
   m_Father: {fileID: 788640848}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2128084914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2128084909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bdd1f25ae3514268b4dc0e57a59eaed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2131233971
 GameObject:
   m_ObjectHideFlags: 0

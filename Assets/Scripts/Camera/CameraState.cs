@@ -5,6 +5,7 @@ using UnityEngine;
 interface ICameraState
 {
     void StateEnter(CameraManager manager);
+    void StateUpdate(CameraManager manager);
     void StateFixedUpdate(CameraManager manager);
     void InputHandler(CameraManager manager);
     void StateExit(CameraManager manager);
@@ -23,5 +24,5 @@ public class CameraState : ICameraState
     virtual public void StateFixedUpdate(CameraManager manager){}
     virtual public void StateExit(CameraManager manager){}
     virtual public void InputHandler(CameraManager manager){}
-	
+
 }

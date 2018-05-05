@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class SnapshotCamera : CameraState {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-
+	
 	override public void StateEnter(CameraManager manager)
     {
-
+		manager.yOffset = 0f;
 	}
+
+	
 	
 	override public void StateUpdate(CameraManager manager)
     {
+		manager.distance =  0f;
 		manager.MouseCameraX();
 		manager.FirstPersonMouseCameraY();
+		manager.ZoomScrollManager();
 	}
 
 	override public void StateExit(CameraManager manager)

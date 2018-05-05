@@ -15,7 +15,9 @@ public class CameraManager : MonoBehaviour {
     private Vector3 screenPoint;
     private Vector3 offset;
     public Transform target;
+    public float lastDistance = 5.0f;
     public float distance = 5.0f;
+    public float yOffset = 3.0f;
     public float xSpeed = 50.0f;
     public float ySpeed = 50.0f;
 
@@ -25,7 +27,11 @@ public class CameraManager : MonoBehaviour {
     public float distanceMin = .5f;
     public float distanceMax = 15f;
 
-    public float smoothTime = 2f;
+    public float zoomMin = 0f;
+    public float zoomMax = 2f;
+
+    public float smoothTime = 5f;
+    public float smoothTimeDistance = 100f;
 
     public float rotationYAxis = 0.0f;
     float rotationXAxis = 0.0f;
@@ -53,7 +59,7 @@ public class CameraManager : MonoBehaviour {
 		m_states[ViewMode.WANDER] = new WanderCamera();
 		m_states[ViewMode.CAMERA] = new SnapshotCamera();
 
-		m_current_state = m_states[ViewMode.WANDER];
+		SetState(ViewMode.WANDER);
 	}
 
 	void Update()
@@ -93,20 +99,6 @@ public class CameraManager : MonoBehaviour {
             //     moveDirection *= -1;
             // }
 
-            if (isControlable)
-            {
-                distance -= Input.GetAxis("Mouse ScrollWheel");
-
-                if (distance > distanceMax)
-                {
-                    distance = distanceMax;
-                }
-                else if (distance < distanceMin)
-                {
-                    distance = distanceMin;
-                }
-            }
-
             rotationYAxis += velocityX;
             rotationXAxis -= velocityY;
 
@@ -116,8 +108,13 @@ public class CameraManager : MonoBehaviour {
             Quaternion toRotation = Quaternion.Euler(rotationXAxis, rotationYAxis, 0);
             Quaternion rotation = toRotation;
 
-            Vector3 negDistance = new Vector3(0.0f, 0.0f, -distance);
-            Vector3 position = rotation * negDistance + target.position;
+            float dist = Mathf.Lerp(lastDistance, distance, Time.deltaTime * smoothTimeDistance);
+            Vector3 negDistance = new Vector3(0.0f, 0.0f, -dist);
+            if (GameManager.instance._viewMode == ViewMode.CAMERA)
+                negDistance = new Vector3(0.0f, 0.0f, dist);
+            Vector3 yOffsetV = new Vector3(0.0f, yOffset, 0);
+            Vector3 position = rotation * negDistance + yOffsetV + target.position;
+            lastDistance = dist;
 
             transform.rotation = rotation;
 			// target.rotation = Quaternion.AngleAxis(transform.rotation.y, Vector3.up);
@@ -133,6 +130,39 @@ public class CameraManager : MonoBehaviour {
 
     }
 
+    public void MouseScrollManager()
+    {
+        distance -= Input.GetAxis("Mouse ScrollWheel");
+        if (distance > distanceMax)
+        {
+            distance = distanceMax;
+        }
+        else if (distance < distanceMin)
+        {
+            distance = distanceMin;
+        }
+    }
+
+    public void ZoomScrollManager()
+    {
+        distance -= Input.GetAxis("Mouse ScrollWheel");
+        distance = Mathf.Min(distance, zoomMax);
+        distance = Mathf.Max(distance, zoomMin);
+    }
+
+    public void GoToSnapshotView() {
+        distance = 0f;
+    }
+
+    public void GoTo3rdPersonView() {
+        distance = 5f;
+    }
+
+    IEnumerator GoToSnapView(float startDist, float endDist = 0) {
+		
+		yield return new WaitForSeconds(2f);
+	}
+
     public static float ClampAngle(float angle, float min, float max)
     {
         if (angle < -360F)
@@ -144,7 +174,7 @@ public class CameraManager : MonoBehaviour {
 
 	public void SetState(ViewMode new_state)
     {
-
+        if (m_states[new_state] == m_current_state) return;
 		if(m_current_state != null)
         	m_current_state.StateExit(this);
 		

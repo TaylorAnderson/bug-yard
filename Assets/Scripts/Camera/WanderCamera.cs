@@ -11,13 +11,14 @@ public class WanderCamera : CameraState {
 	
 	override public void StateEnter(CameraManager manager)
     {
-
+		manager.yOffset = 3f;
 	}
 	
 	override public void StateUpdate(CameraManager manager)
     {
 		manager.MouseCameraX();
 		manager.ThirdPersonMouseCameraY();
+		manager.MouseScrollManager();
 	}
 
 	override public void StateExit(CameraManager manager)

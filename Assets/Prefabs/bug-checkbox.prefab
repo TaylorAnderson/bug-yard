@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114296381623233250}
   - component: {fileID: 114282993929222046}
   m_Layer: 0
-  m_Name: beet Sprite
+  m_Name: bug
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 114133808846651154}
   - component: {fileID: 114888598677431050}
   m_Layer: 0
-  m_Name: checkbox Sprite
+  m_Name: checkbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 114999062783272926}
   - component: {fileID: 114728126588010924}
   m_Layer: 0
-  m_Name: Animation_2018-5-5_15-6-9 Sprite
+  m_Name: text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -100,7 +100,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 213465298902266238, guid: 7109662cbd6b36241a06b02e34906d99, type: 2}
+  m_Sprite: {fileID: 213005583578560656, guid: 7109662cbd6b36241a06b02e34906d99, type: 2}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -171,6 +171,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a7f9001d99db4a4ab7262d08f7395c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  checkbox: {fileID: 1221205980859320}
+  bugText: {fileID: 114999062783272926}
+  bug: {fileID: 114296381623233250}
+  checkedFile: {fileID: 11400000, guid: 7503bff8004ed6448b7a1b0c5653f34e, type: 2}
+  uncheckedFile: {fileID: 11400000, guid: 7109662cbd6b36241a06b02e34906d99, type: 2}
+  isChecked: 0
 --- !u!114 &114728126588010924
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -211,7 +217,7 @@ MonoBehaviour:
   m_File: {fileID: 11400000, guid: 7109662cbd6b36241a06b02e34906d99, type: 2}
   speed: 1
   m_Settings:
-    randomizeOnStart: 1
+    randomizeOnStart: 0
     playOnStart: 1
     overrideFileSettings: 0
     customPlaybackMode: 1

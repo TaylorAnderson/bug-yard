@@ -5,7 +5,7 @@ using UnityEngine;
 public class WanderingAIMovement : MonoBehaviour
 {
 
-    bool isMoving = false;
+    public bool isMoving = false;
     Wander2 wander;
     SteeringBasics steering;
     NearSensor nearSensor;
@@ -14,9 +14,8 @@ public class WanderingAIMovement : MonoBehaviour
 
     float walkSpeed = 2.5f;
 
-    protected void Awake()
+    private void Awake()
     {
-        base.Awake();
         wander = GetComponent<Wander2>();
         steering = GetComponent<SteeringBasics>();
         nearSensor = GetComponentInChildren<NearSensor>();

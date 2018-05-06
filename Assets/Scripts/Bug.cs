@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum BugTypes {
+public enum BugType {
 	ANT,
 	LADYBUG,
 	HORN_BEETLE,
@@ -14,6 +14,7 @@ public enum BugTypes {
 }
 public class Bug : MonoBehaviour {
 
+	public static List<BugType> bugsCaught = new List<BugType>();
 	// Use this for initialization
 	void Start () {
 	}

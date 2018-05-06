@@ -22,9 +22,11 @@ public class CameraTrigger : MonoBehaviour {
 		if (other.CompareTag("Bug")) {
 			var bug = other.GetComponent<Bug>();
 			bugsInView.Add(bug.bugType);
-			var particles = Instantiate(starParticles);
-			particles.transform.position = bug.transform.position;
+			
 			if (!this.particleSystems.ContainsKey(bug)) {
+				var particles = Instantiate(starParticles);
+				particles.transform.position = bug.transform.position;
+				particles.transform.parent = bug.transform;
 				this.particleSystems.Add(bug, particles);
 			}
 		}

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 659360166}
-  m_IndirectSpecularColor: {r: 0.5561815, g: 0.88292265, b: 0.86324984, a: 1}
+  m_IndirectSpecularColor: {r: 0.5570935, g: 0.88294166, b: 0.8632525, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8574,11 +8574,12 @@ Prefab:
       propertyPath: m_Name
       value: PLAYER
       objectReference: {fileID: 0}
-    - target: {fileID: 114692035738415038, guid: b93185efdf0914049b35309f5885cb7b,
+    - target: {fileID: 114960790250265378, guid: b93185efdf0914049b35309f5885cb7b,
         type: 2}
-      propertyPath: _camera
+      propertyPath: starParticles
       value: 
-      objectReference: {fileID: 1523655477}
+      objectReference: {fileID: 1660127865745688, guid: 073a9e943bb894225b0b59c69185eccf,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b93185efdf0914049b35309f5885cb7b, type: 2}
   m_IsPrefabParent: 0
@@ -11307,7 +11308,7 @@ MonoBehaviour:
   m_Settings:
     randomizeOnStart: 0
     playOnStart: 0
-    overrideFileSettings: 0
+    overrideFileSettings: 1
     customPlaybackMode: 0
     customFramesPerSecond: 8
     customBorder: {x: 170, y: 170, z: 170, w: 170}
@@ -11334,7 +11335,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 213702626802759492, guid: cf1acee5f7de249b49f2888cdaee9b73, type: 2}
+  m_Sprite: {fileID: 213772856268330250, guid: cf1acee5f7de249b49f2888cdaee9b73, type: 2}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -16423,8 +16424,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1847011621}
-  m_LocalRotation: {x: 0.23313448, y: 0.37190613, z: 0.09709566, w: -0.8932562}
-  m_LocalPosition: {x: 272.2742, y: 12.04306, z: 273.97574}
+  m_LocalRotation: {x: 0.05469506, y: 0.27926347, z: 0.01593554, w: -0.9585231}
+  m_LocalPosition: {x: 274.4692, y: 4.8628902, z: 235.79874}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -17362,6 +17363,21 @@ Prefab:
         type: 2}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224213070939341918, guid: 14d47396ab4c7b646ad182f066d7cf13,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 224241136891801016, guid: 14d47396ab4c7b646ad182f066d7cf13,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 224066567113746092, guid: 14d47396ab4c7b646ad182f066d7cf13,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 14d47396ab4c7b646ad182f066d7cf13, type: 2}
@@ -19354,6 +19370,21 @@ Prefab:
     - target: {fileID: 1724306383245888, guid: 14d47396ab4c7b646ad182f066d7cf13, type: 2}
       propertyPath: m_Name
       value: end-message
+      objectReference: {fileID: 0}
+    - target: {fileID: 224066567113746092, guid: 14d47396ab4c7b646ad182f066d7cf13,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 224241136891801016, guid: 14d47396ab4c7b646ad182f066d7cf13,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 224213070939341918, guid: 14d47396ab4c7b646ad182f066d7cf13,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 14d47396ab4c7b646ad182f066d7cf13, type: 2}

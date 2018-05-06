@@ -15,7 +15,6 @@ public class FlyingBug : WanderingAIMovement {
 		Vector3 currentPos = this.transform.position;
 		if (currentPos.y < lowerHeight || (rng > 50 && currentPos.y < ceilingHeight)) {
 			//always jump
-			Debug.Log("JUMP");
 			accel.y += jumpStrength;
 		}
 		

@@ -135,10 +135,10 @@ public class CameraManager : MonoBehaviour {
 
     public void ZoomScrollManager()
     {
-        if (Input.GetKeyDown(KeyCode.Z)) {
+        if (Input.GetKeyDown(KeyCode.W)) {
             distance += .5f;
         }
-        if (Input.GetKeyDown(KeyCode.X)) {
+        if (Input.GetKeyDown(KeyCode.S)) {
             distance -= .5f;
         }
         if (distance > zoomMax)

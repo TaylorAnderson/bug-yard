@@ -11,41 +11,38 @@ public class WanderingAIMovement : MonoBehaviour
     NearSensor nearSensor;  //Collision sensor
     CollisionAvoidance collision;   //Collosion reaction bot
 
-    float walkSpeed = 2.5f;
-
-    private void Awake()
+    protected void Awake()
     {
         wander = GetComponent<Wander2>();
         steering = GetComponent<SteeringBasics>();
         nearSensor = GetComponentInChildren<NearSensor>();
         collision = GetComponent<CollisionAvoidance>();
-
-        initSpeedValues();
     }
 
-    void initSpeedValues()
-    {
-        steering.maxVelocity = walkSpeed;   //Give it speeeeed
-    }
-
-    private void Update()
+    protected void Update()
     {
         if (isMoving)
         {
-            Vector3 accel = Vector3.zero;
+            Vector3 accel = getDirection(Vector3.zero);
 
-            if (nearSensor.targets.Count > 0)   //If collision
-            {
-                accel = collision.getSteering(nearSensor.targets);  //Steer away
-            }
-
-            if (accel.magnitude < 0.005f)   //If not moving fast enough, pick somewhere
-            {
-                accel = wander.getSteering();
-            }
             steering.steer(accel);  //move
             steering.lookWhereYoureGoing();
         }
+    }
+
+    virtual protected Vector3 getDirection(Vector3 accel) 
+    {
+        if (nearSensor.targets.Count > 0)   //If collision
+        {
+            accel = collision.getSteering(nearSensor.targets);  //Steer away
+        }
+
+        if (accel.magnitude < 0.005f)   //If not moving fast enough, pick somewhere
+        {
+            accel = wander.getSteering();
+        }
+
+        return accel;
     }
 
     //Doesn't work half the time

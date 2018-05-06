@@ -72,6 +72,7 @@ public class CameraManager : MonoBehaviour {
 
 	void LateUpdate()
     {
+        
         if (target)
         {
             // if (Input.GetMouseButton(1) && isControlable)
@@ -149,6 +150,10 @@ public class CameraManager : MonoBehaviour {
         {
             distance = zoomMin;
         }
+    }
+
+    public void CheckForBugs() {
+        
     }
 
     public void GoToSnapshotView() {

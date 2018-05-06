@@ -15,12 +15,13 @@ public enum BugType {
 public class Bug : MonoBehaviour {
 
 	public static List<BugType> bugsCaught = new List<BugType>();
+	public BugType bugType;
 	// Use this for initialization
 	void Start () {
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
 	}
+
 }

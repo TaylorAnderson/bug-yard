@@ -7,14 +7,14 @@ public class SnapshotCamera : CameraState {
 	
 	override public void StateEnter(CameraManager manager)
     {
-		manager.yOffset = 0f;
+		manager.yOffset = 1f;
+		manager.distance =  0f;
 	}
 
 	
 	
 	override public void StateUpdate(CameraManager manager)
     {
-		manager.distance =  0f;
 		manager.MouseCameraX();
 		manager.FirstPersonMouseCameraY();
 		manager.ZoomScrollManager();

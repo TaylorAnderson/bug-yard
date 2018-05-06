@@ -28,7 +28,7 @@ public class CameraManager : MonoBehaviour {
     public float distanceMax = 15f;
 
     public float zoomMin = 0f;
-    public float zoomMax = 2f;
+    public float zoomMax = 3f;
 
     public float smoothTime = 5f;
     public float smoothTimeDistance = 100f;
@@ -79,8 +79,6 @@ public class CameraManager : MonoBehaviour {
                 velocityX += xSpeed * Input.GetAxis("Mouse X") * 0.02f;
                 velocityY += ySpeed * Input.GetAxis("Mouse Y") * 0.02f;
             // }
-
-
             if (Input.GetMouseButton(2) && isControlable)
             {
                 Vector3 curScreenPoint = new Vector3(moveDirection*Input.mousePosition.x, moveDirection*Input.mousePosition.y, screenPoint.z);
@@ -88,16 +86,6 @@ public class CameraManager : MonoBehaviour {
                 Vector3 curPosition = cam.ScreenToWorldPoint(curScreenPoint) + offset;
                 target.transform.position = curPosition;
             }
-
-            // if (Input.GetKeyDown(KeyCode.R) && isControlable)
-            // {
-            //     target.transform.position = Vector3.zero;
-            // }
-
-            // if (Input.GetKeyDown(KeyCode.T) && isControlable)
-            // {
-            //     moveDirection *= -1;
-            // }
 
             rotationYAxis += velocityX;
             rotationXAxis -= velocityY;
@@ -110,8 +98,9 @@ public class CameraManager : MonoBehaviour {
 
             float dist = Mathf.Lerp(lastDistance, distance, Time.deltaTime * smoothTimeDistance);
             Vector3 negDistance = new Vector3(0.0f, 0.0f, -dist);
-            if (GameManager.instance._viewMode == ViewMode.CAMERA)
-                negDistance = new Vector3(0.0f, 0.0f, dist);
+            if (GameManager.instance._viewMode == ViewMode.CAMERA) {
+                negDistance *= -1;
+            }
             Vector3 yOffsetV = new Vector3(0.0f, yOffset, 0);
             Vector3 position = rotation * negDistance + yOffsetV + target.position;
             lastDistance = dist;
@@ -133,6 +122,7 @@ public class CameraManager : MonoBehaviour {
     public void MouseScrollManager()
     {
         distance -= Input.GetAxis("Mouse ScrollWheel");
+
         if (distance > distanceMax)
         {
             distance = distanceMax;
@@ -145,17 +135,30 @@ public class CameraManager : MonoBehaviour {
 
     public void ZoomScrollManager()
     {
-        distance -= Input.GetAxis("Mouse ScrollWheel");
-        distance = Mathf.Min(distance, zoomMax);
-        distance = Mathf.Max(distance, zoomMin);
+        if (Input.GetKeyDown(KeyCode.Z)) {
+            distance += .5f;
+        }
+        if (Input.GetKeyDown(KeyCode.X)) {
+            distance -= .5f;
+        }
+        if (distance > zoomMax)
+        {
+            distance = zoomMax;
+        }
+        else if (distance < zoomMin)
+        {
+            distance = zoomMin;
+        }
     }
 
     public void GoToSnapshotView() {
         distance = 0f;
+        SetState(ViewMode.CAMERA);
     }
 
     public void GoTo3rdPersonView() {
         distance = 5f;
+        SetState(ViewMode.WANDER);
     }
 
     IEnumerator GoToSnapView(float startDist, float endDist = 0) {

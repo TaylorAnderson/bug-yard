@@ -24,14 +24,14 @@ public class Player : MonoBehaviour {
 	public void GoToCameraView()
 	{
 		m_camera_manager.GoToSnapshotView();
-		GetComponent<CharacterController>().enabled = false;
+		// GetComponent<CharacterController>().enabled = false;
 		GetComponentInChildren<SpriteRenderer>().enabled = false;
 	}
 
 	public void GoToWanderingView()
 	{
 		m_camera_manager.GoTo3rdPersonView();
-		GetComponent<CharacterController>().enabled = true;
+		// GetComponent<CharacterController>().enabled = true;
 		GetComponentInChildren<SpriteRenderer>().enabled = true;
 	}
 

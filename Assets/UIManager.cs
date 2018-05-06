@@ -29,7 +29,8 @@ public class UIManager : MonoBehaviour {
 	void Update () {
 		if (GameManager.instance._viewMode == ViewMode.CAMERA) {
 			if (Input.GetMouseButtonDown(0)) {
-				shutter.GetComponent<DoodleStudio95.DoodleAnimator>().PlayAndPauseAt(1, 3);
+				shutter.GetComponent<DoodleStudio95.DoodleAnimator>().GoToAndPause(-1);
+				shutter.GetComponent<DoodleStudio95.DoodleAnimator>().Play();
 				// shutter.GetComponent<DoodleStudio95.DoodleAnimator>().Pau();
 				// shutter.GetComponent<DoodleAnimator>().Play();
 			}

@@ -38,9 +38,12 @@ public class CameraTrigger : MonoBehaviour {
 		if (other.CompareTag("Bug")) {
 			var bug = other.GetComponent<Bug>();
 			bugsInView.Remove(bug.bugType);
-			GameObject particle = particleSystems[bug];
+			GameObject particle = null;
+			particleSystems.TryGetValue(bug, out particle);
 			particleSystems.Remove(bug);
-			Destroy(particle);
+			if (particle != null) {
+				Destroy(particle);
+			}
 		}
 	}
 	

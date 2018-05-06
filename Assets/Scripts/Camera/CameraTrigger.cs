@@ -19,6 +19,9 @@ public class CameraTrigger : MonoBehaviour {
 	}
 
 	public void OnTriggerEnter(Collider other) {
+
+		if (GameManager.instance._viewMode == ViewMode.WANDER) return;
+
 		if (other.CompareTag("Bug")) {
 			var bug = other.GetComponent<Bug>();
 			bugsInView.Add(bug.bugType);

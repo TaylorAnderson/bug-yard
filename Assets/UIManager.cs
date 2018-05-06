@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DoodleStudio95;
 
 public class UIManager : MonoBehaviour {
 
@@ -26,9 +27,19 @@ public class UIManager : MonoBehaviour {
 
 	void Update () {
 		if (GameManager.instance._viewMode == ViewMode.CAMERA) {
-			if (Input.GetMouseButtonDown(1)) {
+			if (Input.GetMouseButtonDown(0)) {
 				shutter.GetComponent<DoodleStudio95.DoodleAnimator>().Play();
+				// shutter.GetComponent<DoodleStudio95.DoodleAnimator>().Pau();
+				// shutter.GetComponent<DoodleAnimator>().Play();
 			}
 		}
 	}
+
+	// IEnumerator PlayShutterAnimation()
+	// {
+		// shutter.GetComponent<DoodleStudio95.DoodleAnimator>().speed = 0.02f;
+		// shutter.GetComponent<DoodleStudio95.DoodleAnimator>().Play();
+		// yield return shutter.GetComponent<DoodleStudio95.DoodleAnimator>().Playing;
+		// shutter.GetComponent<DoodleStudio95.DoodleAnimator>().Stop();
+	// }
 }

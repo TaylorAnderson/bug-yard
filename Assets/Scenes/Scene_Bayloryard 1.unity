@@ -1714,7 +1714,7 @@ Transform:
   m_GameObject: {fileID: 244680655}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 272.1, y: 14.9, z: 251.7}
-  m_LocalScale: {x: 1, y: 3.6, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 788640848}
   m_RootOrder: 5
@@ -4711,7 +4711,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notepad: {fileID: 13042094}
   cameraFrame: {fileID: 1070892683}
-  shutter: {fileID: 0}
 --- !u!1 &736134215
 GameObject:
   m_ObjectHideFlags: 0
@@ -7032,7 +7031,7 @@ GameObject:
   - component: {fileID: 1160127913}
   - component: {fileID: 1160127912}
   m_Layer: 0
-  m_Name: shutter
+  m_Name: Shutter Animation Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7100,7 +7099,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 213182582766252318, guid: cf1acee5f7de249b49f2888cdaee9b73, type: 2}
+  m_Sprite: {fileID: 213229221420128540, guid: cf1acee5f7de249b49f2888cdaee9b73, type: 2}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7326,6 +7325,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 212883303776678056, guid: abe18298e8ed949759b4c837e46e25b5,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 213084167228534826, guid: 72c32cadf07684355a02e835c0fffa62,
+        type: 2}
+    - target: {fileID: 212464009263285306, guid: abe18298e8ed949759b4c837e46e25b5,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 213084167228534826, guid: 72c32cadf07684355a02e835c0fffa62,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: abe18298e8ed949759b4c837e46e25b5, type: 2}
   m_IsPrefabParent: 0
@@ -10058,8 +10069,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1847011621}
-  m_LocalRotation: {x: 0.087172285, y: 0.89959055, z: 0.21045254, w: -0.37262255}
-  m_LocalPosition: {x: 285.5986, y: -9.36479, z: 244.18845}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 297.6629, y: -140.50731, z: -1735.3417}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

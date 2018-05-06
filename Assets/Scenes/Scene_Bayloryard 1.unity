@@ -5570,12 +5570,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f290dab9b40640fca7fdf59bc660d3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &949972945 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114247905588929096, guid: 14d47396ab4c7b646ad182f066d7cf13,
-    type: 2}
-  m_PrefabInternal: {fileID: 2097362678}
-  m_Script: {fileID: 11500000, guid: 8a7f9001d99db4a4ab7262d08f7395c3, type: 3}
 --- !u!1 &961447680
 GameObject:
   m_ObjectHideFlags: 0
@@ -11820,11 +11814,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1002343534}
     m_Modifications:
-    - target: {fileID: 114058937976296482, guid: 14d47396ab4c7b646ad182f066d7cf13,
-        type: 2}
-      propertyPath: checkBoxes.Array.size
-      value: 7
-      objectReference: {fileID: 0}
     - target: {fileID: 224498043166048144, guid: 14d47396ab4c7b646ad182f066d7cf13,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -11915,17 +11904,12 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 114618130774135182, guid: 14d47396ab4c7b646ad182f066d7cf13,
+    - target: {fileID: 114100085948840074, guid: 14d47396ab4c7b646ad182f066d7cf13,
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 213622692597126040, guid: 91d4d42438559b640b23125a31f086a3,
+      objectReference: {fileID: 213068005883747536, guid: 1070486d3bd9a2b4fab36559a165dde1,
         type: 2}
-    - target: {fileID: 114058937976296482, guid: 14d47396ab4c7b646ad182f066d7cf13,
-        type: 2}
-      propertyPath: checkBoxes.Array.data[6]
-      value: 
-      objectReference: {fileID: 949972945}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 14d47396ab4c7b646ad182f066d7cf13, type: 2}
   m_IsPrefabParent: 0

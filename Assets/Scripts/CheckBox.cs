@@ -22,9 +22,13 @@ public class CheckBox : MonoBehaviour {
 	private int[] currentAnim;
 
 	public bool isChecked = false;
+
+	public BugType bugType;
 	void Start () {	
 		currentAnim = uncheckedFrames;
 		this.checkboxAnim = checkbox.GetComponent<DoodleAnimator>();
+		this.isChecked = Bug.bugsCaught.IndexOf(this.bugType) != -1;
+	
 	}
 	
 	// Update is called once per frame

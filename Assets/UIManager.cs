@@ -7,6 +7,7 @@ public class UIManager : MonoBehaviour {
 	public static UIManager instance;
 	public GameObject notepad;
 	public GameObject cameraFrame;
+	public GameObject shutter;
 	// Use this for initialization
 	void Start () {
 		UIManager.instance = this;
@@ -21,5 +22,13 @@ public class UIManager : MonoBehaviour {
 	public void showCameraOverlay() {
 		cameraFrame.SetActive(true);
 		notepad.SetActive(false);
+	}
+
+	void Update () {
+		if (GameManager.instance._viewMode == ViewMode.CAMERA) {
+			if (Input.GetMouseButtonDown(1)) {
+				shutter.GetComponent<DoodleStudio95.DoodleAnimator>().Play();
+			}
+		}
 	}
 }

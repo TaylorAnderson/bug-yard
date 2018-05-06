@@ -21,8 +21,7 @@ public class GameManager : MonoBehaviour {
 		//do crimes here
 		GameManager.instance = this;
 
-		UIManager.instance.HideCameraOverlay();
-		
+
 	}
 
 	// Update is called once per frame

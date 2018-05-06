@@ -8,6 +8,8 @@ public class CameraFrame : MonoBehaviour {
 	[Range(0, 1)]
 	public float zoom = 0;
 
+	public CameraManager cameraManager;
+
 	public DoodleAnimator zoomBarAnim;
 	// Use this for initialization
 	void Start () {
@@ -15,6 +17,7 @@ public class CameraFrame : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		this.zoom = map(cameraManager.distance, 0, 3, 0, 1);
 		zoomBarAnim.GoToAndPause(Mathf.RoundToInt(map(this.zoom, 0, 1, 0, 7)));
 		
 	}

@@ -75,6 +75,7 @@ GameObject:
   - component: {fileID: 114322517832927864}
   - component: {fileID: 114132400820660578}
   - component: {fileID: 65872485222010464}
+  - component: {fileID: 114284324570063292}
   m_Layer: 0
   m_Name: HoneyBee
   m_TagString: Bug
@@ -201,6 +202,18 @@ MonoBehaviour:
   wanderRadius: 1.2
   wanderDistance: 2
   wanderJitter: 40
+--- !u!114 &114284324570063292
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1960016875301632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d160b341422747d41a613ccf6bba6267, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bugType: 7
 --- !u!114 &114322517832927864
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -297,7 +310,6 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:

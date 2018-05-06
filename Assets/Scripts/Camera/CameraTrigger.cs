@@ -15,23 +15,32 @@ public class CameraTrigger : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		print(bugsInView.Count);
+		//print(bugsInView.Count);
 	}
 
 	public void OnTriggerEnter(Collider other) {
+
+		if (GameManager.instance._viewMode == ViewMode.WANDER) return;
+
 		if (other.CompareTag("Bug")) {
 			var bug = other.GetComponent<Bug>();
 			bugsInView.Add(bug.bugType);
-			var particles = Instantiate(starParticles);
-			particles.transform.position = bug.transform.position;
-			this.particleSystems.Add(bug, particles);
+			
+			if (!this.particleSystems.ContainsKey(bug)) {
+				var particles = Instantiate(starParticles);
+				particles.transform.position = bug.transform.position;
+				particles.transform.parent = bug.transform;
+				this.particleSystems.Add(bug, particles);
+			}
 		}
 	}
 	public void OnTriggerExit(Collider other) {
 		if (other.CompareTag("Bug")) {
 			var bug = other.GetComponent<Bug>();
 			bugsInView.Remove(bug.bugType);
-			Destroy(particleSystems[bug].gameObject);
+			GameObject particle = particleSystems[bug];
+			particleSystems.Remove(bug);
+			Destroy(particle);
 		}
 	}
 	

@@ -173,7 +173,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 15, y: 10, z: 14}
+  m_Size: {x: 2, y: 2, z: 14}
   m_Center: {x: 0, y: 0, z: 7}
 --- !u!81 &81352101183977106
 AudioListener:
@@ -246,7 +246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7beb1f3a014c43eaa45ef0876f364ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _camera: {fileID: 0}
+  _camera: {fileID: 20426572445727898}
   positionWander: {x: 0, y: 3, z: -9}
   positionCamera: {x: 0, y: 1, z: 0}
   standAnim: {fileID: 11400000, guid: 93e4b5a803809446eadc02a1f9d484b5, type: 2}
@@ -287,6 +287,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bugsInView: 
+  starParticles: {fileID: 0}
 --- !u!114 &114979229298586330
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -26,7 +26,7 @@ public class CameraTrigger : MonoBehaviour {
 			var bug = other.GetComponent<Bug>();
 			bugsInView.Add(bug.bugType);
 			
-			if (!this.particleSystems.ContainsKey(bug)) {
+			if (!this.particleSystems.ContainsKey(bug) && Bug.bugsCaught.IndexOf(bug.bugType) == -1) {
 				var particles = Instantiate(starParticles);
 				particles.transform.position = bug.transform.position;
 				particles.transform.parent = bug.transform;

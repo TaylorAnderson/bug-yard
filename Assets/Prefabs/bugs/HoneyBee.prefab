@@ -53,6 +53,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4557442120059250}
+  - component: {fileID: 114462036259726134}
   m_Layer: 0
   m_Name: sprite
   m_TagString: Untagged
@@ -73,10 +74,10 @@ GameObject:
   - component: {fileID: 54120880434007162}
   - component: {fileID: 114322517832927864}
   - component: {fileID: 114132400820660578}
-  - component: {fileID: 136840395739269862}
+  - component: {fileID: 65872485222010464}
   m_Layer: 0
   m_Name: HoneyBee
-  m_TagString: Untagged
+  m_TagString: Bug
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -87,14 +88,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1829489970708098}
-  m_LocalRotation: {x: 0.7169045, y: 0, z: 0, w: 0.6971714}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4645300473862802}
   m_Father: {fileID: 4931107614567756}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 91.599, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4645300473862802
 Transform:
   m_ObjectHideFlags: 1
@@ -115,7 +116,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1960016875301632}
   m_LocalRotation: {x: 0, y: 0.36905217, z: 0, w: -0.9294087}
-  m_LocalPosition: {x: -1.6724946, y: 2.85, z: 18.428709}
+  m_LocalPosition: {x: 248.66263, y: 18.08, z: 240.23134}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4956561983680224}
@@ -130,7 +131,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1009517009635708}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.664, z: 3.48}
+  m_LocalPosition: {x: 0, y: 0.38, z: 1.72}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4931107614567756}
@@ -158,11 +159,23 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1009517009635708}
   m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3, y: 3, z: 2}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65872485222010464
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1960016875301632}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 3, y: 4, z: 1}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!114 &114098050008816540
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -200,7 +213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxVelocity: 2.5
-  maxAcceleration: 10
+  maxAcceleration: 20
   targetRadius: 0.005
   slowRadius: 1
   timeToTarget: 0.1
@@ -219,9 +232,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMoving: 1
-  jumpStrength: 1000
-  ceilingHeight: 50
-  lowerHeight: 20
+  jumpStrength: 100
+  ceilingHeight: 20
+  lowerHeight: 5
+  rngJump: 20
 --- !u!114 &114460596655471952
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -233,7 +247,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d0fb7ad878c96643a9ef33951d933ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxAcceleration: 15
+  maxAcceleration: 20
+--- !u!114 &114462036259726134
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1829489970708098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f290dab9b40640fca7fdf59bc660d3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114878879558516388
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -259,19 +284,6 @@ MonoBehaviour:
     customFilterMode: 2
     wrapMode: 1
     startFrame: 0
---- !u!136 &136840395739269862
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1960016875301632}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &212374747846164854
 SpriteRenderer:
   m_ObjectHideFlags: 1

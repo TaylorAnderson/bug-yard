@@ -76,7 +76,7 @@ GameObject:
   - component: {fileID: 65197802761397986}
   m_Layer: 0
   m_Name: GroundBeetle
-  m_TagString: Untagged
+  m_TagString: Bug
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -88,7 +88,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1754518919185006}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 3.81}
+  m_LocalPosition: {x: 0, y: 0.46, z: 3.33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4984090553271236}
@@ -113,14 +113,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1686682157127586}
-  m_LocalRotation: {x: 0.7169045, y: 0, z: 0, w: 0.6971714}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4461893709183844}
   m_Father: {fileID: 4984090553271236}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 91.599, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!4 &4984090553271236
 Transform:
   m_ObjectHideFlags: 1
@@ -128,7 +128,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1793195909493502}
   m_LocalRotation: {x: 0, y: 0.36905217, z: 0, w: -0.9294087}
-  m_LocalPosition: {x: -1.6374769, y: 2.51, z: 14.082332}
+  m_LocalPosition: {x: 257.23096, y: 16.06, z: 252.64227}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4186180533629472}
@@ -161,8 +161,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4, y: 4, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 3, y: 1, z: 4.5}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!65 &65360472725313020
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -170,10 +170,10 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1754518919185006}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 3, y: 1, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114041871032604028
 MonoBehaviour:
@@ -222,7 +222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d0fb7ad878c96643a9ef33951d933ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxAcceleration: 15
+  maxAcceleration: 20
 --- !u!114 &114666188840296272
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -248,12 +248,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6f58141e9f357e448fd2fa6f1afc1f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxVelocity: 1.5
-  maxAcceleration: 10
+  maxVelocity: 2
+  maxAcceleration: 20
   targetRadius: 0.005
   slowRadius: 1
   timeToTarget: 0.1
-  turnSpeed: 20
+  turnSpeed: 2
   smoothing: 1
   numSamplesForSmoothing: 5
 --- !u!114 &114994385703798762

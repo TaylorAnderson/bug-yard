@@ -24,7 +24,7 @@ public class WanderingAIMovement : MonoBehaviour
         if (isMoving)
         {
             Vector3 accel = getDirection(Vector3.zero);
-
+            //Debug.Log(accel);
             steering.steer(accel);  //move
             steering.lookWhereYoureGoing();
         }

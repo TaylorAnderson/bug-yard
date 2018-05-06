@@ -24,10 +24,10 @@ GameObject:
   - component: {fileID: 54782169662688914}
   - component: {fileID: 114603925004253712}
   - component: {fileID: 114438081773331324}
-  - component: {fileID: 136229273237311840}
+  - component: {fileID: 65423234429459618}
   m_Layer: 0
   m_Name: Butterfly
-  m_TagString: Untagged
+  m_TagString: Bug
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -57,6 +57,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4064515160341536}
+  - component: {fileID: 114282317123815166}
   m_Layer: 0
   m_Name: sprite
   m_TagString: Untagged
@@ -87,14 +88,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1765275851463590}
-  m_LocalRotation: {x: 0.7169045, y: 0, z: 0, w: 0.6971714}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4715766915066420}
   m_Father: {fileID: 4681898359244630}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 91.599, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4681898359244630
 Transform:
   m_ObjectHideFlags: 1
@@ -102,7 +103,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1047964807212570}
   m_LocalRotation: {x: 0, y: 0.36905217, z: 0, w: -0.9294087}
-  m_LocalPosition: {x: -4.21, y: 0.93, z: 23.16}
+  m_LocalPosition: {x: 248.57654, y: 17.25, z: 244.82834}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4738185131289584}
@@ -130,7 +131,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1913513769560138}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.664, z: 3.48}
+  m_LocalPosition: {x: 0, y: -0.11, z: 1.73}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4681898359244630}
@@ -151,6 +152,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &65423234429459618
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1047964807212570}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4, y: 4, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65594549351030824
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -158,11 +171,22 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1913513769560138}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 4, y: 3, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114282317123815166
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1765275851463590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f290dab9b40640fca7fdf59bc660d3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114438081773331324
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -199,7 +223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d0fb7ad878c96643a9ef33951d933ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxAcceleration: 15
+  maxAcceleration: 20
 --- !u!114 &114603925004253712
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -212,7 +236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxVelocity: 2.5
-  maxAcceleration: 10
+  maxAcceleration: 20
   targetRadius: 0.005
   slowRadius: 1
   timeToTarget: 0.1
@@ -231,9 +255,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMoving: 1
-  jumpStrength: 1000
-  ceilingHeight: 50
-  lowerHeight: 20
+  jumpStrength: 100
+  ceilingHeight: 20
+  lowerHeight: 5
+  rngJump: 20
 --- !u!114 &114909524976232828
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -259,19 +284,6 @@ MonoBehaviour:
     customFilterMode: 2
     wrapMode: 1
     startFrame: 0
---- !u!136 &136229273237311840
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1047964807212570}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &212476970740150446
 SpriteRenderer:
   m_ObjectHideFlags: 1

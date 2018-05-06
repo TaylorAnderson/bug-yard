@@ -5,6 +5,9 @@ using UnityEngine;
 public class CameraTrigger : MonoBehaviour {
 
 	public List<BugType> bugsInView = new List<BugType>();
+	public GameObject starParticles;
+	public Dictionary<Bug, GameObject> particleSystems = new Dictionary<Bug, GameObject>();
+	
 	// Use this for initialization
 	void Start () {
 		
@@ -19,12 +22,16 @@ public class CameraTrigger : MonoBehaviour {
 		if (other.CompareTag("Bug")) {
 			var bug = other.GetComponent<Bug>();
 			bugsInView.Add(bug.bugType);
+			var particles = Instantiate(starParticles);
+			particles.transform.position = bug.transform.position;
+			this.particleSystems.Add(bug, particles);
 		}
 	}
 	public void OnTriggerExit(Collider other) {
 		if (other.CompareTag("Bug")) {
 			var bug = other.GetComponent<Bug>();
 			bugsInView.Remove(bug.bugType);
+			Destroy(particleSystems[bug].gameObject);
 		}
 	}
 	

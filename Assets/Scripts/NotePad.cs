@@ -15,8 +15,17 @@ public class NotePad : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		if (Input.GetKeyDown(KeyCode.Q)) {
+
+			if (movingUp) this.MoveDown();
+			else MoveUp();
+
+		}
+
 		if (this.startMoving) {
 			if (this.movingUp) {
+				
 				this.rectTransform.position += Vector3.up * this.rectTransform.anchoredPosition.y * -0.5f;
 			}
 			else {

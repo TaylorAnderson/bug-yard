@@ -30,14 +30,22 @@ public class UIManager : MonoBehaviour {
 		if (GameManager.instance._viewMode == ViewMode.CAMERA) {
 			DoodleStudio95.DoodleAnimator shutterAnim = shutter.GetComponent<DoodleStudio95.DoodleAnimator>();
 			if (Input.GetMouseButtonDown(0)) {
-				shutterAnim.GoToAndPlay(0);
+				//shutterAnim.GoToAndPlay(0);
 				// shutter.GetComponent<DoodleStudio95.DoodleAnimator>().Pau();
 				// shutter.GetComponent<DoodleAnimator>().Play();
+				StartCoroutine(showShutter(shutterAnim));
 			}
-			if (shutterAnim.CurrentFrame == 3) {
+			/**if (shutterAnim.CurrentFrame == 3) {
 				shutterAnim.GoToAndPause(0);
-			}
+			}*/
 		}
+	}
+
+	IEnumerator showShutter(DoodleAnimator shutterAnim)
+	{
+		shutterAnim.GoToAndPause(3);
+		yield return 1000;
+		shutterAnim.GoToAndPause(0);
 	}
 
 	// IEnumerator PlayShutterAnimation()

@@ -10,10 +10,9 @@ public class BillboardSprite : MonoBehaviour {
 	
 	void Update () {
 		
-		transform.LookAt(
-			transform.position + Camera.main.transform.rotation * Vector3.forward,
-            Camera.main.transform.rotation * Vector3.up
-		);
+		Vector3 v = Camera.main.transform.position - transform.position;
+        v.x = v.z = 0.0f;
+        transform.LookAt(Camera.main.transform.position - v); 
 
 	}
 }

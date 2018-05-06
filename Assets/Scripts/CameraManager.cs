@@ -27,6 +27,8 @@ public class CameraManager : MonoBehaviour {
     public float distanceMin = .5f;
     public float distanceMax = 15f;
 
+    [Range(0, 1)]
+	public float zoom = 0;
     public float zoomMin = 0f;
     public float zoomMax = 3f;
 
@@ -39,6 +41,8 @@ public class CameraManager : MonoBehaviour {
     float velocityX = 0.0f;
     float velocityY = 0.0f;
     float moveDirection = -1;
+
+    
 	
 	void Start ()
 	{			
@@ -150,7 +154,14 @@ public class CameraManager : MonoBehaviour {
         {
             distance = zoomMin;
         }
+
+        this.zoom = map(distance, 0, 3, 0, 1);
+		UIManager.instance.cameraZoomIndicator.GetComponent<DoodleStudio95.DoodleAnimator>().GoToAndPause(Mathf.RoundToInt(map(this.zoom, 0, 1, 0, 7)));
     }
+
+    float map(float x, float fromMin, float fromMax, float toMin, float toMax){
+		return toMin + ((x - fromMin) / (fromMax - fromMin)) * (toMax - toMin);
+	}
 
     public void CheckForBugs() {
         

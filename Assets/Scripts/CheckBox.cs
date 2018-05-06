@@ -25,6 +25,7 @@ public class CheckBox : MonoBehaviour {
 
 	public BugType bugType;
 	void Start () {	
+
 		currentAnim = uncheckedFrames;
 		this.checkboxAnim = checkbox.GetComponent<DoodleAnimator>();
 		this.isChecked = Bug.bugsCaught.IndexOf(this.bugType) != -1;
@@ -33,6 +34,8 @@ public class CheckBox : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		this.isChecked = Bug.bugsCaught.IndexOf(this.bugType) != -1;
+		
 		if (isChecked) {
 			this.checkboxAnim.ChangeAnimation(checkedFile);
 			var tmp = bugText.color;

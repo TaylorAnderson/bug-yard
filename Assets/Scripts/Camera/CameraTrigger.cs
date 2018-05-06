@@ -14,6 +14,7 @@ public class CameraTrigger : MonoBehaviour {
 	void Update () {
 		print(bugsInView.Count);
 	}
+
 	public void OnTriggerEnter(Collider other) {
 		if (other.CompareTag("Bug")) {
 			var bug = other.GetComponent<Bug>();
@@ -26,4 +27,5 @@ public class CameraTrigger : MonoBehaviour {
 			bugsInView.Remove(bug.bugType);
 		}
 	}
+	
 }

@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 54956533877655072}
   - component: {fileID: 114418263812794672}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Player With Camera Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -193,6 +193,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
@@ -443,6 +444,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 144b996f77c05d14a8083981015716b7, type: 2}
   m_StaticBatchInfo:

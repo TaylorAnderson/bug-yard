@@ -17,8 +17,9 @@ public class CameraFrame : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		this.zoom = map(cameraManager.distance, 0, 3, 0, 1);
-		zoomBarAnim.GoToAndPause(Mathf.RoundToInt(map(this.zoom, 0, 1, 0, 7)));
+
+		// this.zoom = map(cameraManager.distance, 0, 3, 0, 1);
+		// zoomBarAnim.GoToAndPause(Mathf.RoundToInt(map(this.zoom, 0, 1, 0, 7)));
 		
 	}
 	float map(float x, float fromMin, float fromMax, float toMin, float toMax){

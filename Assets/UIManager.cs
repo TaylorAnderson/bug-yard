@@ -28,10 +28,15 @@ public class UIManager : MonoBehaviour {
 
 	void Update () {
 		if (GameManager.instance._viewMode == ViewMode.CAMERA) {
+			DoodleStudio95.DoodleAnimator shutterAnim = shutter.GetComponent<DoodleStudio95.DoodleAnimator>();
 			if (Input.GetMouseButtonDown(0)) {
-				shutter.GetComponent<DoodleStudio95.DoodleAnimator>().PlayAndPauseAt(1, 3);
+				shutterAnim.GoToAndPlay(0);
+				
 				// shutter.GetComponent<DoodleStudio95.DoodleAnimator>().Pau();
 				// shutter.GetComponent<DoodleAnimator>().Play();
+			}
+			if (shutterAnim.CurrentFrame == 3) {
+				shutterAnim.GoToAndPause(0);
 			}
 		}
 	}

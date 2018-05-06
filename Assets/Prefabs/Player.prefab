@@ -25,8 +25,6 @@ GameObject:
   - component: {fileID: 136894292567985216}
   - component: {fileID: 54311268238006018}
   - component: {fileID: 114802224833475342}
-  - component: {fileID: 114746582114818536}
-  - component: {fileID: 65275178665185176}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -64,6 +62,8 @@ GameObject:
   - component: {fileID: 124293732369742784}
   - component: {fileID: 81352101183977106}
   - component: {fileID: 114202215148978646}
+  - component: {fileID: 65131098983054946}
+  - component: {fileID: 114960790250265378}
   m_Layer: 0
   m_Name: MAIN_CAMERA
   m_TagString: MainCamera
@@ -163,18 +163,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &65275178665185176
+--- !u!65 &65131098983054946
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1842433514534756}
+  m_GameObject: {fileID: 1985486971263418}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 15, y: 10, z: 14}
+  m_Center: {x: 0, y: 0, z: 7}
 --- !u!81 &81352101183977106
 AudioListener:
   m_ObjectHideFlags: 1
@@ -229,6 +229,7 @@ MonoBehaviour:
   yMaxLimit: 60
   distanceMin: 1
   distanceMax: 8
+  zoom: 0
   zoomMin: 0
   zoomMax: 3
   smoothTime: 6
@@ -248,18 +249,8 @@ MonoBehaviour:
   _camera: {fileID: 0}
   positionWander: {x: 0, y: 3, z: -9}
   positionCamera: {x: 0, y: 1, z: 0}
---- !u!114 &114746582114818536
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1842433514534756}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13f22ae9d81f5cf4aa75ab8f4b8c7b8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bugsInView: 
+  standAnim: {fileID: 11400000, guid: 93e4b5a803809446eadc02a1f9d484b5, type: 2}
+  walkAnim: {fileID: 11400000, guid: a0b0dbea649233943aada2aecb7a8ceb, type: 2}
 --- !u!114 &114802224833475342
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -284,6 +275,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   castShadows: 1
   receiveShadows: 1
+--- !u!114 &114960790250265378
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1985486971263418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13f22ae9d81f5cf4aa75ab8f4b8c7b8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bugsInView: 
 --- !u!114 &114979229298586330
 MonoBehaviour:
   m_ObjectHideFlags: 1

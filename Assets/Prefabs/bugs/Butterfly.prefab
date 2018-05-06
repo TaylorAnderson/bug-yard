@@ -163,7 +163,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4, y: 4, z: 1}
+  m_Size: {x: 4, y: 4, z: 4}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65594549351030824
 BoxCollider:
@@ -284,7 +284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_States: []
-  m_File: {fileID: 11400000, guid: a708aaf8cea0a8d449d0d71ae2be1b83, type: 2}
+  m_File: {fileID: 11400000, guid: 61d15de8f99201049904e3f66e67ef88, type: 2}
   speed: 1
   m_Settings:
     randomizeOnStart: 1
@@ -331,7 +331,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 213801563628625148, guid: a708aaf8cea0a8d449d0d71ae2be1b83, type: 2}
+  m_Sprite: {fileID: 213102604399634222, guid: 61d15de8f99201049904e3f66e67ef88, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

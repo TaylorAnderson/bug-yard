@@ -28,6 +28,7 @@ public class DoorScript : MonoBehaviour {
 		if (otherTag == "player") {
 			if (checkIfAllBugsCaught()) 
 			{
+				Bug.bugsCaught.Clear();
 				SceneManager.LoadSceneAsync("EndScene");
 			}
 		}

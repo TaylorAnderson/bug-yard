@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 114860533467751036}
   - component: {fileID: 114867583904663844}
   - component: {fileID: 65097443644728580}
+  - component: {fileID: 114793148342212950}
   m_Layer: 0
   m_Name: HornBeetle
   m_TagString: Bug
@@ -235,6 +236,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cfdaa6b4aa86854cad04292e279f62e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114793148342212950
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1484674864442832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d160b341422747d41a613ccf6bba6267, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bugType: 2
 --- !u!114 &114860533467751036
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -281,7 +294,6 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:

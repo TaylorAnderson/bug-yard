@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114603925004253712}
   - component: {fileID: 114438081773331324}
   - component: {fileID: 65423234429459618}
+  - component: {fileID: 114526965350834102}
   m_Layer: 0
   m_Name: Butterfly
   m_TagString: Bug
@@ -224,6 +225,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxAcceleration: 20
+--- !u!114 &114526965350834102
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1047964807212570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d160b341422747d41a613ccf6bba6267, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bugType: 3
 --- !u!114 &114603925004253712
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -297,7 +310,6 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:

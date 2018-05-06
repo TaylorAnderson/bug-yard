@@ -9,6 +9,7 @@ public class NotePad : MonoBehaviour {
 	// Use this for initialization
 	private bool startMoving = false;
 	private bool movingUp = false;
+
 	void Start () {
 		this.rectTransform = GetComponent<RectTransform>();
 	}
@@ -29,7 +30,7 @@ public class NotePad : MonoBehaviour {
 				this.rectTransform.position += Vector3.up * this.rectTransform.anchoredPosition.y * -0.5f;
 			}
 			else {
-				this.rectTransform.position += Vector3.up * ((-500 + this.rectTransform.anchoredPosition.y) * -0.5f);
+				this.rectTransform.position += Vector3.up * ((-458 + this.rectTransform.anchoredPosition.y) * -0.5f);	//468 is the rect pos y
 			}
 			
 		}

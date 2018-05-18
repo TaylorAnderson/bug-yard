@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 54782169662688914}
   - component: {fileID: 114603925004253712}
   - component: {fileID: 114438081773331324}
-  - component: {fileID: 65423234429459618}
+  - component: {fileID: 136979662107836284}
   - component: {fileID: 114526965350834102}
   m_Layer: 0
   m_Name: Butterfly
@@ -104,7 +104,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1047964807212570}
   m_LocalRotation: {x: 0, y: 0.36905217, z: 0, w: -0.9294087}
-  m_LocalPosition: {x: 248.57654, y: 17.25, z: 244.82834}
+  m_LocalPosition: {x: 234.10692, y: 17.53, z: 249.92511}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4738185131289584}
@@ -153,18 +153,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &65423234429459618
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1047964807212570}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 4, y: 4, z: 4}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65594549351030824
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -297,6 +285,19 @@ MonoBehaviour:
     customFilterMode: 2
     wrapMode: 1
     startFrame: 0
+--- !u!136 &136979662107836284
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1047964807212570}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.66
+  m_Height: 4
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &212476970740150446
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -310,6 +311,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:

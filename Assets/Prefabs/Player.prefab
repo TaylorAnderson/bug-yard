@@ -64,6 +64,7 @@ GameObject:
   - component: {fileID: 114202215148978646}
   - component: {fileID: 65131098983054946}
   - component: {fileID: 114960790250265378}
+  - component: {fileID: 114570874756733446}
   m_Layer: 0
   m_Name: MAIN_CAMERA
   m_TagString: MainCamera
@@ -103,15 +104,15 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1842433514534756}
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 266.19, y: 15.5, z: 250}
+  m_LocalRotation: {x: 0, y: 0.69264686, z: 0, w: 0.7212769}
+  m_LocalPosition: {x: 187.17, y: 15.5, z: 243.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4063268251271720}
   - {fileID: 4020319298729974}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 87.68, z: 0}
 --- !u!20 &20426572445727898
 Camera:
   m_ObjectHideFlags: 1
@@ -197,7 +198,7 @@ MonoBehaviour:
   m_File: {fileID: 11400000, guid: 93e4b5a803809446eadc02a1f9d484b5, type: 2}
   speed: 1
   m_Settings:
-    randomizeOnStart: 1
+    randomizeOnStart: 0
     playOnStart: 1
     overrideFileSettings: 0
     customPlaybackMode: 1
@@ -235,6 +236,19 @@ MonoBehaviour:
   smoothTime: 6
   smoothTimeDistance: 12
   rotationYAxis: 0
+  ppProfile: {fileID: 11400000, guid: 9567072394cc145dfb26ce5a5b06d804, type: 2}
+--- !u!114 &114570874756733446
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1985486971263418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: 9567072394cc145dfb26ce5a5b06d804, type: 2}
 --- !u!114 &114692035738415038
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -287,7 +301,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bugsInView: 
-  starParticles: {fileID: 0}
+  starParticles: {fileID: 1660127865745688, guid: 073a9e943bb894225b0b59c69185eccf,
+    type: 2}
 --- !u!114 &114979229298586330
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -382,7 +397,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 213508170771532978, guid: 93e4b5a803809446eadc02a1f9d484b5, type: 2}
+  m_Sprite: {fileID: 213466662605798970, guid: 93e4b5a803809446eadc02a1f9d484b5, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

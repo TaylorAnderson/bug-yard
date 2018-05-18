@@ -15,8 +15,6 @@ public class SnapshotCamera : CameraState {
 	
 	override public void StateUpdate(CameraManager manager)
     {
-		manager.MouseCameraX();
-		manager.FirstPersonMouseCameraY();
 		manager.ZoomScrollManager();
 		manager.CheckForBugs();
 	}

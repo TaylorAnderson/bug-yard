@@ -12,7 +12,7 @@ public class PressAnyButton : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.anyKeyDown) {
-			SceneManager.LoadSceneAsync("Scene_Backyard");
+			SceneManager.LoadSceneAsync("Baniel-Zone");
 		}
 	}
 }

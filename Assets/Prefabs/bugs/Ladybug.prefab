@@ -39,8 +39,8 @@ GameObject:
   - component: {fileID: 54572302597465560}
   - component: {fileID: 114961568254573538}
   - component: {fileID: 114206299889606178}
-  - component: {fileID: 65457271147657050}
   - component: {fileID: 114448361454470712}
+  - component: {fileID: 136643402484806288}
   m_Layer: 0
   m_Name: Ladybug
   m_TagString: Bug
@@ -102,7 +102,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1033512277128536}
   m_LocalRotation: {x: 0, y: 0.36905217, z: 0, w: -0.9294087}
-  m_LocalPosition: {x: 252.3, y: 15.81, z: 221.9}
+  m_LocalPosition: {x: 229.20566, y: 15.42, z: 255.11453}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4200072842216512}
@@ -130,7 +130,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1014231835579954}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4668184635725434}
@@ -164,18 +164,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3, y: 1, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &65457271147657050
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1033512277128536}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3, y: 1, z: 3}
-  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!114 &114114182529406128
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -281,6 +269,19 @@ MonoBehaviour:
   turnSpeed: 2
   smoothing: 1
   numSamplesForSmoothing: 5
+--- !u!136 &136643402484806288
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1033512277128536}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1
+  m_Height: 6.06
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &212400380993632564
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -294,6 +295,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:

@@ -28,16 +28,18 @@ public class Player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if ((lastPosition - transform.position).magnitude > 0.05) {
+		if ((lastPosition - transform.position).magnitude > 0.01) {
 			if (currentAnim != walkAnim) {
 				currentAnim = walkAnim;
 				doodleGirl.ChangeAnimation(walkAnim);
+				doodleGirl.GoToAndPlay();
 			}
 		}
 		else {
 			if (currentAnim != standAnim) {
 				currentAnim = standAnim;
 				doodleGirl.ChangeAnimation(standAnim);
+				doodleGirl.GoToAndPlay();
 			}
 		}
 

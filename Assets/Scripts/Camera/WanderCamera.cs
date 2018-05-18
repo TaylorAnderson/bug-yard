@@ -16,8 +16,6 @@ public class WanderCamera : CameraState {
 	
 	override public void StateUpdate(CameraManager manager)
     {
-		manager.MouseCameraX();
-		manager.ThirdPersonMouseCameraY();
 		manager.MouseScrollManager();
 	}
 

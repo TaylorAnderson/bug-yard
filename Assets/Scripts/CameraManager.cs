@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.PostProcessing;
 
 public class CameraManager : MonoBehaviour {
 
@@ -42,9 +43,9 @@ public class CameraManager : MonoBehaviour {
     float velocityY = 0.0f;
     float moveDirection = -1;
 
-    
-	
-	void Start ()
+	public PostProcessingProfile ppProfile;
+
+	public void Start ()
 	{			
 		cam = GetComponent<Camera>();
 
@@ -64,6 +65,8 @@ public class CameraManager : MonoBehaviour {
 		m_states[ViewMode.CAMERA] = new SnapshotCamera();
 
 		SetState(ViewMode.WANDER);
+
+
 	}
 
 	void Update()
@@ -170,11 +173,14 @@ public class CameraManager : MonoBehaviour {
     public void GoToSnapshotView() {
         distance = 0f;
         SetState(ViewMode.CAMERA);
+        ppProfile.depthOfField.enabled = true;
+        
     }
 
     public void GoTo3rdPersonView() {
-        distance = 5f;
+        distance = 9f;
         SetState(ViewMode.WANDER);
+        ppProfile.depthOfField.enabled = false;
     }
 
     IEnumerator GoToSnapView(float startDist, float endDist = 0) {
@@ -202,70 +208,4 @@ public class CameraManager : MonoBehaviour {
 
     }
 
-	public void MouseCameraX() {
-
-		// rotAverageX = 0f;
- 
-		// rotationX += Input.GetAxis("Mouse X") * sensitivityX * Time.timeScale;
-
-		// rotArrayX.Add(rotationX);
-
-		// if (rotArrayX.Count >= framesOfSmoothing)
-		// {
-		// 	rotArrayX.RemoveAt(0);
-		// }
-		// for(int i = 0; i < rotArrayX.Count; i++)
-		// {
-		// 	rotAverageX += rotArrayX[i];
-		// }
-		// rotAverageX /= rotArrayX.Count;
-		// rotAverageX = ClampAngle(rotAverageX, minimumX, maximumX);
-
-		// Quaternion xQuaternion = Quaternion.AngleAxis (rotAverageX, Vector3.up);
-		// target.Rotate(Vector3.up * Input.GetAxis("Mouse X") * 18f * Time.timeScale);		
-
-	}
-
-	public void FirstPersonMouseCameraY() {
-
-		// rotAverageY = 0f;
- 
-		// float invertFlag = 1f;
-		// if( invertY )
-		// {
-		// 	invertFlag = -1f;
-		// }
-		// rotationY += Input.GetAxis("Mouse Y") * sensitivityY * invertFlag * Time.timeScale;
-		
-		// rotationY = Mathf.Clamp(rotationY, minimumY, maximumY);
-
-		// rotArrayY.Add(rotationY);
-
-		// if (rotArrayY.Count >= framesOfSmoothing)
-		// {
-		// 	rotArrayY.RemoveAt(0);
-		// }
-		// for(int j = 0; j < rotArrayY.Count; j++)
-		// {
-		// 	rotAverageY += rotArrayY[j];
-		// }
-		// rotAverageY /= rotArrayY.Count;
-
-		// Quaternion yQuaternion = Quaternion.AngleAxis (rotAverageY, Vector3.left);
-		// yQuaternion =  originalRotation * yQuaternion;
-		// playerPosition.Rotate(yQuaternion.eulerAngles);
-
-	}
-
-	public void ThirdPersonMouseCameraY() {
-
-		// float velocityY += ySpeed * Input.GetAxis("Mouse Y") * 0.02f;
-		// transform.RotateAround(
-		// 	playerPosition.position,
-		// 	transform.TransformDirection(Vector3.left),
-		// 	-rotY
-		// );
-
-
-	}
 }

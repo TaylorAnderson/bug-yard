@@ -56,8 +56,8 @@ GameObject:
   - component: {fileID: 54110062920600552}
   - component: {fileID: 114486470541106816}
   - component: {fileID: 114864613283724186}
-  - component: {fileID: 65648422522396528}
   - component: {fileID: 114575439690955118}
+  - component: {fileID: 136960786637861238}
   m_Layer: 0
   m_Name: Centipede
   m_TagString: Bug
@@ -89,7 +89,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1649165552776770}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.71, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4728573196809722}
@@ -115,8 +115,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1723167513508446}
-  m_LocalRotation: {x: 0, y: 0.36905217, z: 0, w: -0.9294087}
-  m_LocalPosition: {x: 245.74182, y: 15.83, z: 228.28468}
+  m_LocalRotation: {x: 0, y: 0.87745136, z: 0, w: -0.47966567}
+  m_LocalPosition: {x: 231.59435, y: 15.179736, z: 248.16098}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4618919933989718}
@@ -152,18 +152,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &65648422522396528
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1723167513508446}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 5}
-  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!65 &65888080379573334
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -281,6 +269,19 @@ MonoBehaviour:
   wanderRadius: 1.2
   wanderDistance: 2
   wanderJitter: 40
+--- !u!136 &136960786637861238
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1723167513508446}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.86
+  m_Height: 5.08
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &212051404018460152
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -294,6 +295,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
